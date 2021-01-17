@@ -27,4 +27,3 @@ export const FormModal = ( {confirm, cancel} ) => {
         </Modal>
     )
 }
-export default FormModal;
