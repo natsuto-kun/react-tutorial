@@ -7,7 +7,7 @@ import styled from 'styled-components';
 const Header = styled.header`
   display: flex;
   justify-content: space-between;
-  padding: 24px, 64px, 0;
+  padding: 24px 64px 0;
   border-bottom: 1px solid #E0E0E0;
 `
 
@@ -48,10 +48,9 @@ function App() {
       <Header>
         <HeaderUl>
           <HeaderLi focused={tab === 'list'} onClick={() => setTab('list')}>リスト</HeaderLi>
-          <HeaderLi onClick={() => setTab('form')}>フォーム</HeaderLi>
+          <HeaderLi focused={tab === 'form'} onClick={() => setTab('form')}>フォーム</HeaderLi>
         </HeaderUl>
       </Header>
-      <hr />
       {
         tab === 'list' ? <List langs={langs} /> : <Form onAddLang={addLang}/>
       }
